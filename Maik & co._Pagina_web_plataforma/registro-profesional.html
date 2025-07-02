@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Profesional | Maik&Co.</title>
+    <link rel="stylesheet" href="css/registro-profesional.css">
+    <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <script>window.location.href = 'mantenimiento.html';</script>
+    <main class="registro-main logo-bg">
+        <section class="registro-section">
+            <h1>Crear cuenta profesional</h1>
+            <form class="registro-form">
+                <div class="input-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="input-icon">
+                    <i class="fas fa-user-tag"></i>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                </div>
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="input-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                </div>
+                <div class="input-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required>
+                </div>
+                <div class="input-icon">
+                    <i class="fas fa-briefcase"></i>
+                    <input type="text" id="especialidad" name="especialidad" placeholder="Especialidad" required>
+                </div>
+                <div class="input-icon">
+                    <i class="fas fa-align-left"></i>
+                    <textarea id="descripcion" name="descripcion" rows="3" placeholder="Descripción breve" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrarme</button>
+            </form>
+            <a href="login-profesional.html" class="login-link">¿Ya tienes cuenta? Inicia sesión aquí</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Maik&Co. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/registro.js"></script>
+</body>
+</html> 

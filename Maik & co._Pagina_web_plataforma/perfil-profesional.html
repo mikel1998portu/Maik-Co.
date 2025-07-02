@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profesional - Maik & Co.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/plataforma-cliente.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+            </div>
+            <nav class="sidebar-nav">
+                <a href="plataforma-cliente.html#buscar">🔎 Buscar profesionales</a>
+                <a href="plataforma-cliente.html#proyectos">📊 Mis proyectos</a>
+                <a href="plataforma-cliente.html#favoritos">⭐ Favoritos</a>
+                <a href="perfil-cliente.html">👤 Perfil</a>
+                <a href="plataforma-cliente.html#soporte">⚖️ Soporte</a>
+                <a href="#" onclick="cerrarSesion()">⏻ Cerrar sesión</a>
+            </nav>
+        </aside>
+        <main class="dashboard-main">
+            <section class="section perfil-profesional-section">
+                <div class="perfil-pro-header">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="María López" class="perfil-pro-avatar">
+                    <div class="perfil-pro-info">
+                        <h1>María López</h1>
+                        <div class="perfil-pro-especialidad">Electricista · Bilbao</div>
+                        <div class="perfil-pro-valoracion">
+                            <span>⭐⭐⭐⭐☆</span> <span>(4.8)</span>
+                        </div>
+                        <div class="perfil-pro-precio">40 €/h</div>
+                        <div class="perfil-pro-disponibilidad">Disponibilidad: Hoy</div>
+                        <div class="perfil-pro-actions">
+                            <button class="btn-pro-fav">⭐ Añadir a favoritos</button>
+                            <button class="btn-pro-chat">💬 Iniciar chat</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="perfil-pro-desc">
+                    <h2>Sobre mí</h2>
+                    <p>Soy electricista con más de 10 años de experiencia en instalaciones y reformas. Me especializo en soluciones eficientes y seguras para hogares y empresas. Trabajo rápido, limpio y siempre con garantía.</p>
+                </div>
+                <div class="perfil-pro-reviews">
+                    <h2>Valoraciones de clientes</h2>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-user">Juan Pérez</span>
+                            <span class="review-stars">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <div class="review-text">Muy profesional, rápida y eficaz. ¡Repetiré seguro!</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-user">Lucía García</span>
+                            <span class="review-stars">⭐⭐⭐⭐</span>
+                        </div>
+                        <div class="review-text">Buen trabajo y trato excelente. La recomiendo.</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        function cerrarSesion() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html> 

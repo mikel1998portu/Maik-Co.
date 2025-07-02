@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Cliente - Maik & Co.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/plataforma-cliente.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#buscar" class="active" onclick="showSection('buscar')">🔎 Buscar profesionales</a>
+                <a href="#proyectos" onclick="showSection('proyectos')">📊 Mis proyectos</a>
+                <a href="#favoritos" onclick="showSection('favoritos')">⭐ Favoritos</a>
+                <a href="perfil-cliente.html" id="perfil-link">👤 Perfil</a>
+                <a href="#soporte" onclick="showSection('soporte')">⚖️ Soporte</a>
+                <a href="#" onclick="cerrarSesion()">⏻ Cerrar sesión</a>
+            </nav>
+        </aside>
+        <main class="dashboard-main">
+            <section id="buscar" class="section active">
+                <h1>Buscar profesionales</h1>
+                <form id="filtros-profesionales" class="filtros-profesionales">
+                    <label><span>🔌</span>
+                        <select name="categoria" title="Selecciona una categoría">
+                            <option value="">Categoría</option>
+                            <option value="electricista">Electricista</option>
+                            <option value="pintor">Pintor</option>
+                            <option value="abogado">Abogado</option>
+                            <option value="fontanero">Fontanero</option>
+                            <option value="informatico">Informático</option>
+                        </select>
+                    </label>
+                    <label><span>📍</span>
+                        <input type="text" name="zona" placeholder="Zona geográfica (ej: Bilbao)">
+                    </label>
+                    <label><span>⭐</span>
+                        <select name="valoracion" title="Selecciona valoración mínima">
+                            <option value="">Valoración mínima</option>
+                            <option value="5">5 estrellas</option>
+                            <option value="4">4 estrellas o más</option>
+                            <option value="3">3 estrellas o más</option>
+                        </select>
+                    </label>
+                    <label><span>💶</span>
+                        <input type="number" name="precio" placeholder="Precio máximo (€)" min="0">
+                    </label>
+                    <label><span>📅</span>
+                        <select name="disponibilidad" title="Selecciona disponibilidad">
+                            <option value="">Disponibilidad</option>
+                            <option value="hoy">Hoy</option>
+                            <option value="esta_semana">Esta semana</option>
+                            <option value="cualquier">Cualquier fecha</option>
+                        </select>
+                    </label>
+                    <button type="submit"><span>🔎</span>Buscar</button>
+                </form>
+                <div class="resultados-profesionales" id="resultados-profesionales">
+                    <!-- Aquí se mostrarán las tarjetas de profesionales -->
+                </div>
+            </section>
+            <section id="proyectos" class="section">
+                <h1>📊 Mis proyectos</h1>
+                <div class="proyectos-lista">
+                    <p>No tienes proyectos aún.</p>
+                </div>
+            </section>
+            <section id="favoritos" class="section">
+                <h1>⭐ Favoritos</h1>
+                <div class="favoritos-lista">
+                    <p>No tienes profesionales favoritos aún.</p>
+                </div>
+            </section>
+            <section id="perfil" class="section">
+                <!-- Eliminada la sección de perfil aquí -->
+            </section>
+            <section id="soporte" class="section">
+                <h1>⚖️ Soporte</h1>
+                <form class="soporte-form">
+                    <label>Motivo de la consulta
+                        <select>
+                            <option>Duda general</option>
+                            <option>Problema con un profesional</option>
+                            <option>Problema de pago</option>
+                            <option>Soporte técnico</option>
+                        </select>
+                    </label>
+                    <label>Mensaje
+                        <textarea rows="4" placeholder="Describe tu consulta..."></textarea>
+                    </label>
+                    <button type="submit">Enviar consulta</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="js/plataforma-cliente.js"></script>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+            document.querySelectorAll('.sidebar-nav a').forEach(link => link.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            document.querySelector('.sidebar-nav a[href="#'+id+'"]').classList.add('active');
+        }
+        // Renderizado de profesionales (esperando datos reales)
+        function renderProfesionales(lista) {
+            const cont = document.getElementById('resultados-profesionales');
+            cont.innerHTML = '';
+            if (!lista || !lista.length) {
+                cont.innerHTML = '<p>No hay profesionales disponibles en este momento.</p>';
+                return;
+            }
+            lista.forEach(p => {
+                let estrellasSVG = '';
+                for (let i = 1; i <= 5; i++) {
+                    estrellasSVG += i <= Math.round(p.valoracion)
+                        ? '<svg viewBox="0 0 20 20"><polygon points="10,1 12.5,7.5 19,7.5 13.5,12 15.5,18 10,14.5 4.5,18 6.5,12 1,7.5 7.5,7.5"/></svg>'
+                        : '<svg viewBox="0 0 20 20"><polygon points="10,1 12.5,7.5 19,7.5 13.5,12 15.5,18 10,14.5 4.5,18 6.5,12 1,7.5 7.5,7.5" fill="#eee"/></svg>';
+                }
+                cont.innerHTML += `
+                <div class="pro-card">
+                    <img src="${p.foto}" alt="${p.nombre}">
+                    <div class="pro-info">
+                        <h3>${p.nombre}</h3>
+                        <div class="pro-especialidad">${p.categoria} · ${p.zona}</div>
+                        <div class="pro-valoracion">${estrellasSVG} <span>(${p.valoracion})</span></div>
+                        <div class="pro-precio">${p.precio} €/h</div>
+                        <a href="perfil-profesional.html" class="ver-perfil" target="_blank"><span>👁️</span> Ver perfil</a>
+                    </div>
+                </div>
+                `;
+            });
+        }
+        // Inicialmente, no hay profesionales (esperando backend o datos reales)
+        renderProfesionales([]);
+        document.getElementById('filtros-profesionales').onsubmit = function(e) {
+            e.preventDefault();
+            // Aquí se filtrarán los profesionales cuando haya datos reales
+            renderProfesionales([]);
+        };
+    </script>
+</body>
+</html>

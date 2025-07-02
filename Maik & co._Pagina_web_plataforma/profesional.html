@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maik&Co. - Plataforma para profesionales">
+    <title>Maik&Co. - Área Profesional</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon/favicon.png">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profesional.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="mantenimiento.html" class="btn-primary">Plataforma</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Profesional -->
+        <section class="hero-profesional">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                    <h1>Únete a Nuestra Red de Profesionales</h1>
+                    <p class="hero-subtitle">Conecta con clientes, crece tu negocio y ofrece tus servicios en nuestra plataforma líder</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="profesionales-count">0</span>
+                            <span class="stat-label">Profesionales</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="servicios-count">0</span>
+                            <span class="stat-label">Servicios</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="clientes-count">0</span>
+                            <span class="stat-label">Clientes Satisfechos</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="registro-profesional.html" class="btn btn-primary btn-lg">Regístrate como Profesional</a>
+                        <a href="#benefits" class="btn btn-outline-light btn-lg">Conoce los Beneficios</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios -->
+        <section id="benefits" class="benefits" aria-labelledby="benefits-title">
+            <div class="container">
+                <h2 id="benefits-title" class="section-title" data-aos="fade-up">Beneficios para Profesionales</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-users"></i>
+                        <h3>Red de Clientes</h3>
+                        <p>Accede a una amplia red de clientes potenciales que buscan tus servicios específicos.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Crecimiento del Negocio</h3>
+                        <p>Herramientas y recursos para expandir tu negocio y aumentar tus ingresos.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-tools"></i>
+                        <h3>Herramientas Profesionales</h3>
+                        <p>Plataforma completa con herramientas de gestión, programación y comunicación.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-star"></i>
+                        <h3>Construye tu Reputación</h3>
+                        <p>Sistema de reseñas y valoraciones que te ayuda a destacar. Las buenas reseñas aumentan tu visibilidad y atraen más clientes.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Seguridad Garantizada</h3>
+                        <p>Trabaja con confianza gracias a nuestro sistema de pagos seguro y verificación de clientes. Protección contra impagos y garantía de satisfacción.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Gestión Eficiente</h3>
+                        <p>Organiza tu tiempo con nuestro sistema de calendario inteligente. Reservas online, recordatorios automáticos y gestión de disponibilidad.</p>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-comments"></i>
+                        <h3>Comunicación Directa</h3>
+                        <p>Mantén una comunicación fluida con tus clientes a través de nuestra plataforma integrada. Chat en tiempo real y notificaciones instantáneas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planes de Suscripción -->
+        <section id="planes" class="planes" aria-labelledby="planes-title">
+            <div class="container">
+                <h2 id="planes-title" class="section-title" data-aos="fade-up">Planes para Profesionales</h2>
+                <p class="section-subtitle" data-aos="fade-up">Elige el plan que mejor se adapte a tus necesidades</p>
+                
+                <div class="planes-grid">
+                    <div class="plan-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="plan-header">
+                            <i class="fas fa-rocket"></i>
+                            <h3>Plan Básico</h3>
+                            <p class="plan-precio">Gratis</p>
+                        </div>
+                        <div class="plan-content">
+                            <ul class="plan-caracteristicas">
+                                <li><i class="fas fa-check"></i> Perfil profesional básico</li>
+                                <li><i class="fas fa-check"></i> Hasta 5 servicios activos</li>
+                                <li><i class="fas fa-check"></i> Comisión del 15% por servicio</li>
+                                <li><i class="fas fa-check"></i> Soporte por email</li>
+                                <li><i class="fas fa-check"></i> Estadísticas básicas</li>
+                            </ul>
+                            <a href="registro-profesional.html" class="btn btn-outline-primary">Comenzar Gratis</a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card destacado" data-aos="fade-up" data-aos-delay="200">
+                        <div class="plan-header">
+                            <i class="fas fa-star"></i>
+                            <h3>Plan Premium</h3>
+                            <p class="plan-precio">29€<span>/mes</span></p>
+                        </div>
+                        <div class="plan-content">
+                            <ul class="plan-caracteristicas">
+                                <li><i class="fas fa-check"></i> Todo lo del plan básico</li>
+                                <li><i class="fas fa-check"></i> Servicios ilimitados</li>
+                                <li><i class="fas fa-check"></i> Comisión reducida al 10%</li>
+                                <li><i class="fas fa-check"></i> Soporte prioritario 24/7</li>
+                                <li><i class="fas fa-check"></i> Perfil destacado en búsquedas</li>
+                                <li><i class="fas fa-check"></i> Estadísticas avanzadas</li>
+                                <li><i class="fas fa-check"></i> Marketing personalizado</li>
+                            </ul>
+                            <a href="registro-profesional.html" class="btn btn-primary">Elegir Premium</a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="plan-header">
+                            <i class="fas fa-crown"></i>
+                            <h3>Plan Empresarial</h3>
+                            <p class="plan-precio">99€<span>/mes</span></p>
+                        </div>
+                        <div class="plan-content">
+                            <ul class="plan-caracteristicas">
+                                <li><i class="fas fa-check"></i> Todo lo del plan Premium</li>
+                                <li><i class="fas fa-check"></i> Comisión mínima del 8%</li>
+                                <li><i class="fas fa-check"></i> Múltiples perfiles profesionales</li>
+                                <li><i class="fas fa-check"></i> Gestor de cuenta dedicado</li>
+                                <li><i class="fas fa-check"></i> API de integración</li>
+                                <li><i class="fas fa-check"></i> Reportes personalizados</li>
+                                <li><i class="fas fa-check"></i> Acceso a eventos exclusivos</li>
+                            </ul>
+                            <a href="registro-profesional.html" class="btn btn-outline-primary">Elegir Empresarial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="planes-info" data-aos="fade-up">
+                    <h3>¿Por qué elegir un plan de pago?</h3>
+                    <div class="planes-beneficios">
+                        <div class="beneficio">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Mayor Visibilidad</h4>
+                            <p>Tu perfil aparece en las primeras posiciones de búsqueda</p>
+                        </div>
+                        <div class="beneficio">
+                            <i class="fas fa-percentage"></i>
+                            <h4>Comisiones Reducidas</h4>
+                            <p>Ahorra hasta un 7% en cada servicio completado</p>
+                        </div>
+                        <div class="beneficio">
+                            <i class="fas fa-tools"></i>
+                            <h4>Herramientas Avanzadas</h4>
+                            <p>Accede a funcionalidades exclusivas para crecer tu negocio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proceso -->
+        <section id="process" class="process" aria-labelledby="process-title">
+            <div class="container">
+                <h2 id="process-title" class="section-title" data-aos="fade-up">Proceso de Registro</h2>
+                <div class="process-steps">
+                    <div class="step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">1</div>
+                        <h3>Completa tu Perfil</h3>
+                        <p>Registra tus datos profesionales y experiencia</p>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">2</div>
+                        <h3>Verificación</h3>
+                        <p>Validamos tu información en 24-48 horas</p>
+                    </div>
+                    <div class="step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">3</div>
+                        <h3>¡Comienza a Trabajar!</h3>
+                        <p>Accede a clientes y comienza a ofrecer tus servicios</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías -->
+        <section id="categories" class="categories" aria-labelledby="categories-title">
+            <div class="container">
+                <h2 id="categories-title" class="section-title" data-aos="fade-up">Categorías de Servicios</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-home"></i>
+                        <h3>Servicios para el Hogar</h3>
+                        <p>Limpieza, mantenimiento, reparaciones</p>
+                        <a href="#" class="category-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-car"></i>
+                        <h3>Servicios Automotrices</h3>
+                        <p>Mecánica, detailing, transporte</p>
+                        <a href="#" class="category-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Servicios Profesionales</h3>
+                        <p>Consultoría, asesoría, diseño</p>
+                        <a href="#" class="category-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section class="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 id="testimonials-title" class="section-title" data-aos="fade-up">Lo que dicen nuestros profesionales</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-content">
+                            <p>"Maik&Co. ha transformado mi negocio. He podido expandir mi cartera de clientes y gestionar mis proyectos de manera más eficiente."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="img/testimonial-1.jpg" alt="María García">
+                            <div class="author-info">
+                                <h4>María García</h4>
+                                <p>Diseñadora de Interiores</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-content">
+                            <p>"La plataforma es intuitiva y las herramientas son excelentes. He podido organizar mejor mi tiempo y aumentar mis ingresos."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="img/testimonial-2.jpg" alt="Carlos Rodríguez">
+                            <div class="author-info">
+                                <h4>Carlos Rodríguez</h4>
+                                <p>Desarrollador Web</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 id="faq-title" class="section-title" data-aos="fade-up">Preguntas Frecuentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3>¿Cuánto cuesta registrarse?</h3>
+                        <p>El registro es completamente gratuito. Solo cobramos una pequeña comisión por cada servicio completado.</p>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3>¿Cómo recibo los pagos?</h3>
+                        <p>Los pagos se procesan a través de nuestra plataforma segura y se transfieren a tu cuenta bancaria.</p>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3>¿Puedo elegir mis clientes?</h3>
+                        <p>Sí, tienes total libertad para aceptar o rechazar solicitudes de servicio según tu disponibilidad.</p>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3>¿Qué requisitos necesito?</h3>
+                        <p>Necesitas documentación que acredite tu experiencia profesional, certificaciones relevantes y un historial de trabajos anteriores. El proceso de verificación es rápido y sencillo.</p>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                        <h3>¿Cómo funciona el sistema de valoraciones?</h3>
+                        <p>Los clientes pueden calificarte después de cada servicio (1-5 estrellas) y dejar comentarios detallados. Las buenas valoraciones aumentan tu visibilidad en la plataforma.</p>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                        <h3>¿Qué soporte ofrecéis?</h3>
+                        <p>Ofrecemos soporte técnico 24/7, asesoramiento profesional, herramientas de gestión y formación continua para ayudarte a crecer en tu negocio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 id="cta-title">¿Listo para Crecer tu Negocio?</h2>
+                    <p>Únete a nuestra comunidad de profesionales y comienza a ofrecer tus servicios hoy mismo.</p>
+                    <div class="cta-buttons">
+                        <a href="registro-profesional.html" class="btn btn-primary btn-lg">Regístrate Ahora</a>
+                        <a href="contacto.html" class="btn btn-outline-light btn-lg">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tarjetas de Valor -->
+        <section class="section">
+            <div class="container">
+                <div class="value-cards">
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Para Clientes</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Encuentra profesionales verificados</li>
+                            <li><i class="fas fa-check"></i> Precios transparentes</li>
+                            <li><i class="fas fa-check"></i> Sistema de pagos seguro</li>
+                            <li><i class="fas fa-check"></i> Reseñas y calificaciones</li>
+                        </ul>
+                        <a href="index.html" class="btn btn-primary">Buscar Servicios</a>
+                    </div>
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Para Profesionales</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Amplia red de clientes</li>
+                            <li><i class="fas fa-check"></i> Herramientas de gestión</li>
+                            <li><i class="fas fa-check"></i> Pagos garantizados</li>
+                            <li><i class="fas fa-check"></i> Soporte dedicado</li>
+                        </ul>
+                        <a href="registro-profesional.html" class="btn btn-primary">Registrarse</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-links">
+                    <a href="index.html" class="logo">
+                        <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+                    </a>
+                    <p>Conectando profesionales y clientes en toda España</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="plataforma.html">Plataforma</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="cookies.html">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir las últimas novedades</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>Maik&Co. — Unimos personas, solucionamos problemas.</p>
+                <p>With ♥ from The Basque Country!</p>
+                <p>&copy; 2025 Maik & Co. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+
+            // Manejo del menú móvil
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuBtn && navLinks) {
+                menuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    menuBtn.classList.toggle('active');
+                });
+            }
+
+            // Cerrar menú al hacer clic en un enlace
+            const navItems = document.querySelectorAll('.nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        menuBtn.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="js/contadores.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+</html> 

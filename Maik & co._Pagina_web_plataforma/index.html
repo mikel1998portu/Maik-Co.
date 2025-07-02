@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maik & Co. - Conectando Profesionales con Clientes</title>
+    <meta name="description" content="Plataforma que conecta profesionales verificados con clientes que buscan servicios de calidad en el País Vasco.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon/favicon.png">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="blog.html" target="_blank">Blog</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="mantenimiento.html" class="btn-primary">Plataforma</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1 id="hero-title">Encuentra el profesional perfecto para tu proyecto</h1>
+                <p>Conectamos clientes con profesionales cualificados para hacer realidad tus ideas.</p>
+                <div class="user-type-selection" data-aos="fade-up" data-aos-delay="200">
+                    <h2>Accede a la plataforma</h2>
+                    <div class="user-type-buttons">
+                        <a href="login.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Iniciar sesión
+                        </a>
+                        <a href="registro-cliente.html" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-user-plus"></i>
+                            Registrarse
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="servicios">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegir Maik & Co.?</h2>
+            <div class="platform-features">
+                <div class="feature-card">
+                    <i class="fas fa-user-check feature-icon"></i>
+                    <h3>Profesionales Verificados</h3>
+                    <p>Todos nuestros profesionales pasan por un riguroso proceso de verificación para garantizar la calidad del servicio.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-star feature-icon"></i>
+                    <h3>Sistema de Valoraciones</h3>
+                    <p>Lee opiniones reales de otros clientes antes de contratar a un profesional.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Pagos Seguros</h3>
+                    <p>Tu dinero está protegido hasta que el servicio se complete satisfactoriamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios Destacados -->
+    <section class="servicios-destacados" data-aos="fade-up">
+        <div class="container">
+            <h2>Nuestros Servicios Destacados</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Servicios Legales</h3>
+                    <p>Asesoramiento jurídico profesional y personalizado</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3>Pintura</h3>
+                    <p>Acabados perfectos para tu hogar</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Fontanería</h3>
+                    <p>Soluciones rápidas y eficientes</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Electricidad</h3>
+                    <p>Instalaciones seguras y modernas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Todas las Categorías -->
+    <section class="todas-categorias" data-aos="fade-up">
+        <div class="container">
+            <h2>Todas Nuestras Categorías</h2>
+            <p class="categorias-intro">Encuentra el profesional perfecto para cualquier proyecto</p>
+            
+            <div class="categorias-grid">
+                <!-- Servicios Legales -->
+                <div class="categoria-grupo">
+                    <h3><i class="fas fa-gavel"></i> Servicios Legales</h3>
+                    <ul>
+                        <li>Abogados</li>
+                        <li>Asesoría Jurídica</li>
+                        <li>Derecho Civil</li>
+                        <li>Derecho Laboral</li>
+                        <li>Derecho Mercantil</li>
+                        <li>Notarías</li>
+                    </ul>
+                </div>
+
+                <!-- Construcción y Reformas -->
+                <div class="categoria-grupo">
+                    <h3><i class="fas fa-building"></i> Construcción y Reformas</h3>
+                    <ul>
+                        <li>Reformas Integrales</li>
+                        <li>Reformas de Cocinas</li>
+                        <li>Reformas de Baños</li>
+                        <li>Reformas de Locales</li>
+                        <li>Construcción de Viviendas</li>
+                        <li>Ampliaciones</li>
+                    </ul>
+                </div>
+
+                <!-- Instalaciones -->
+                <div class="categoria-grupo">
+                    <h3><i class="fas fa-tools"></i> Instalaciones</h3>
+                    <ul>
+                        <li>Fontanería</li>
+                        <li>Electricidad</li>
+                        <li>Climatización</li>
+                        <li>Gas</li>
+                        <li>Domótica</li>
+                        <li>Alarmas y Seguridad</li>
+                    </ul>
+                </div>
+
+                <!-- Acabados -->
+                <div class="categoria-grupo">
+                    <h3><i class="fas fa-paint-roller"></i> Acabados</h3>
+                    <ul>
+                        <li>Pintura</li>
+                        <li>Albañilería</li>
+                        <li>Yeso y Escayola</li>
+                        <li>Azulejos y Cerámica</li>
+                        <li>Carpintería</li>
+                        <li>Parquet y Suelos</li>
+                    </ul>
+                </div>
+
+                <!-- Diseño y Decoración -->
+                <div class="categoria-grupo">
+                    <h3><i class="fas fa-pencil-ruler"></i> Diseño y Decoración</h3>
+                    <ul>
+                        <li>Interiorismo</li>
+                        <li>Decoración</li>
+                        <li>Mobiliario a Medida</li>
+                        <li>Iluminación</li>
+                        <li>Textiles</li>
+                        <li>Paisajismo</li>
+                    </ul>
+                </div>
+
+                <!-- Mantenimiento -->
+                <div class="categoria-grupo">
+                    <h3><i class="fas fa-wrench"></i> Mantenimiento</h3>
+                    <ul>
+                        <li>Limpieza</li>
+                        <li>Jardinería</li>
+                        <li>Piscinas</li>
+                        <li>Calefacción</li>
+                        <li>Reparaciones</li>
+                        <li>Conservación</li>
+                    </ul>
+                </div>
+
+                <!-- Especialistas -->
+                <div class="categoria-grupo">
+                    <h3><i class="fas fa-user-tie"></i> Especialistas</h3>
+                    <ul>
+                        <li>Arquitectos</li>
+                        <li>Aparejadores</li>
+                        <li>Ingenieros</li>
+                        <li>Peritos</li>
+                        <li>Diseñadores</li>
+                        <li>Consultores</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="categorias-cta">
+                <p>¿No encuentras lo que buscas?</p>
+                <a href="contacto.html" class="btn btn-primary">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-light" id="como-funciona">
+        <div class="container">
+            <h2 class="section-title">Cómo Funciona</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Busca</h3>
+                    <p>Encuentra el profesional que necesitas por categoría o ubicación. Filtra por valoraciones, precios y disponibilidad.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Compara</h3>
+                    <p>Revisa perfiles detallados, valoraciones de otros clientes y precios de diferentes profesionales.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Contrata</h3>
+                    <p>Agenda el servicio y paga de forma segura a través de nuestra plataforma. Tu dinero está protegido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section-light" id="testimonios">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-slider">
+                <div class="professionals-grid">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/150" alt="Cliente" class="testimonial-avatar">
+                        <h3>María García</h3>
+                        <p>"Encontré un abogado excelente para mi caso. El proceso fue muy sencillo y el servicio impecable. Definitivamente volveré a usar la plataforma."</p>
+                        <div class="professional-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/150" alt="Cliente" class="testimonial-avatar">
+                        <h3>Juan Pérez</h3>
+                        <p>"El electricista que contraté fue puntual, profesional y resolvió mi problema rápidamente. El sistema de pagos es muy seguro y práctico."</p>
+                        <div class="professional-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="value-cards">
+                <div class="value-card">
+                    <h3>Para Clientes</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Acceso a profesionales verificados</li>
+                        <li><i class="fas fa-check"></i> Sistema de valoraciones y reseñas</li>
+                        <li><i class="fas fa-check"></i> Pagos seguros y protegidos</li>
+                        <li><i class="fas fa-check"></i> Soporte 24/7</li>
+                    </ul>
+                    <a href="registro-cliente.html" class="btn btn-primary">Soy Cliente</a>
+                </div>
+                <div class="value-card">
+                    <h3>Para Profesionales</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Perfil destacado y verificado</li>
+                        <li><i class="fas fa-check"></i> Gestión de agenda integrada</li>
+                        <li><i class="fas fa-check"></i> Pagos automáticos y seguros</li>
+                        <li><i class="fas fa-check"></i> Soporte dedicado</li>
+                    </ul>
+                    <a href="profesional.html" class="btn btn-primary">Soy Profesional</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-links">
+                    <a href="index.html" class="logo">
+                        <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+                    </a>
+                    <p>Conectando profesionales y clientes en toda España</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html" target="_blank">Blog</a></li>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="plataforma.html">Plataforma</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="cookies.html">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir las últimas novedades</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>Maik&Co. — Unimos personas, solucionamos problemas.</p>
+                <p>With ♥ from The Basque Country!</p>
+                <p>&copy; 2025 Maik & Co. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

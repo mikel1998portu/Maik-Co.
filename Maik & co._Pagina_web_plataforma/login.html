@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Maik & Co.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main class="login-main logo-bg">
+        <section class="login-section">
+            <h1>Iniciar sesión</h1>
+            <form id="loginForm">
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="input-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+            <a href="registro-cliente.html" class="login-link">¿No tienes cuenta? Regístrate aquí</a>
+        </section>
+    </main>
+    <script>
+        document.getElementById('loginForm').onsubmit = function(e) {
+            e.preventDefault();
+            // Simulación de login
+            localStorage.setItem('clienteLogueado', '1');
+            window.location.href = 'plataforma-cliente.html';
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Maik&Co. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html> 

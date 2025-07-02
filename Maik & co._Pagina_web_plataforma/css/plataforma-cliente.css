@@ -1,0 +1,157 @@
+/* --- Rediseño minimalista y elegante --- */
+body {
+    background: linear-gradient(120deg, #f8fafc 60%, #e3e9f7 100%);
+}
+.dashboard-main {
+    background: none;
+}
+.section, .perfil-section, .perfil-profesional-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(26,35,126,0.07);
+    padding: 2.5rem 2.2rem 2.2rem 2.2rem;
+    margin-bottom: 3.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section h1, .section h2 {
+    color: #1a237e;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+input, select, textarea {
+    background: #fff;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 0.9rem 1.2rem;
+    margin-top: 0.2rem;
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+    min-height: 48px;
+    box-sizing: border-box;
+    color: #1a237e;
+}
+input:focus, select:focus, textarea:focus {
+    border: 1.5px solid #1a237e;
+    box-shadow: 0 0 0 2px #e3eaff;
+}
+button, .perfil-actions button, .btn-pro-fav, .btn-pro-chat, .avatar-upload-btn, .delete-account-btn {
+    min-height: 48px;
+    font-size: 1.08rem;
+    font-family: inherit;
+    border-radius: 8px;
+    padding: 0.9rem 2.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    border: none;
+    outline: none;
+    background: #1a237e;
+    color: #fff;
+    box-shadow: 0 2px 8px #1a237e11;
+}
+button:hover, .perfil-actions button:hover, .btn-pro-fav:hover, .btn-pro-chat:hover, .avatar-upload-btn:hover, .delete-account-btn:hover {
+    background: #0d164d;
+}
+.delete-account-btn {
+    background: #fff;
+    color: #e53935;
+    border: 1.5px solid #e53935;
+    box-shadow: none;
+}
+.delete-account-btn:hover {
+    background: #e53935;
+    color: #fff;
+}
+.pro-card, .proyecto-card, .favorito-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(26,35,126,0.08);
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    align-items: center;
+    border: 1px solid #eee;
+    min-height: 90px;
+    max-width: 420px;
+    margin: 0 auto 1.2rem auto;
+}
+.pro-card img, .favorito-card img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid #e0e0e0;
+    background: #f8f8f8;
+}
+.pro-info h3, .favorito-card h4 {
+    color: #1a237e;
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin: 0 0 0.2rem 0;
+}
+.pro-especialidad, .favorito-card p {
+    color: #64748b;
+    font-size: 0.98rem;
+    margin: 0.1rem 0;
+}
+.pro-valoracion {
+    color: #f5a623;
+    font-size: 0.98rem;
+    margin-bottom: 0.1rem;
+}
+.pro-precio {
+    color: #2e7d32;
+    font-size: 0.98rem;
+    font-weight: 600;
+}
+.proyectos-lista, .favoritos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+}
+.proyectos-lista p, .favoritos-lista p, #resultados-profesionales p {
+    background: none;
+    color: #64748b;
+    font-size: 1.08rem;
+    font-weight: 500;
+    border-radius: 0;
+    padding: 2.2rem 1.5rem;
+    text-align: center;
+    margin: 2.5rem auto;
+    box-shadow: none;
+    max-width: 420px;
+    letter-spacing: 0.01em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+}
+.proyectos-lista p::before {
+    content: '📂';
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.favoritos-lista p::before {
+    content: '⭐';
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+#resultados-profesionales p::before {
+    content: '🕵️‍♂️';
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+@media (max-width: 900px) {
+    .section, .perfil-section, .perfil-profesional-section { padding: 1.2rem 0.5rem; }
+    .pro-card, .proyecto-card, .favorito-card { max-width: 98vw; }
+}
