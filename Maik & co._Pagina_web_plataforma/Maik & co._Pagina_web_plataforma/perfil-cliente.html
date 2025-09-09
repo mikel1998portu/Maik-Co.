@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Maik & Co.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/plataforma-cliente.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="img/Logo/Logo.jpg" alt="Maik & Co. Logo">
+            </div>
+            <nav class="sidebar-nav">
+                <a href="plataforma-cliente.html#buscar">🔎 Buscar profesionales</a>
+                <a href="plataforma-cliente.html#proyectos">📊 Mis proyectos</a>
+                <a href="plataforma-cliente.html#favoritos">⭐ Favoritos</a>
+                <a href="perfil-cliente.html" class="active">👤 Perfil</a>
+                <a href="plataforma-cliente.html#soporte">⚖️ Soporte</a>
+                <a href="#" onclick="cerrarSesion()">⏻ Cerrar sesión</a>
+            </nav>
+        </aside>
+        <main class="dashboard-main">
+            <section class="section active perfil-section">
+                <h1>👤 Mi perfil</h1>
+                <form class="perfil-form perfil-form-grid" id="perfilForm">
+                    <div class="perfil-avatar-container">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Avatar" class="perfil-avatar" id="avatarPreview">
+                        <label class="avatar-upload-btn">
+                            Cambiar foto
+                            <input type="file" accept="image/*" style="display:none" id="avatarInput">
+                        </label>
+                    </div>
+                    <div class="perfil-fields">
+                        <div class="perfil-row">
+                            <label>Nombre completo
+                                <input type="text" value="" placeholder="Tu nombre" required>
+                            </label>
+                            <label>Email
+                                <input type="email" value="" placeholder="Tu email" required>
+                            </label>
+                        </div>
+                        <div class="perfil-row">
+                            <label>Teléfono
+                                <input type="tel" value="" placeholder="Tu teléfono" required>
+                            </label>
+                            <label>Dirección
+                                <input type="text" value="" placeholder="Tu dirección" required>
+                            </label>
+                        </div>
+                        <div class="perfil-row">
+                            <label>Ciudad/Provincia
+                                <input type="text" value="" placeholder="Ciudad, provincia" required>
+                            </label>
+                            <label>Fecha de nacimiento
+                                <input type="date" value="" required>
+                            </label>
+                        </div>
+                        <div class="perfil-row">
+                            <label>Género
+                                <select required>
+                                    <option value="">Selecciona</option>
+                                    <option value="hombre">Hombre</option>
+                                    <option value="mujer">Mujer</option>
+                                    <option value="otro">Otro</option>
+                                    <option value="no-decir">Prefiero no decirlo</option>
+                                </select>
+                            </label>
+                            <label>Contraseña
+                                <div class="password-field">
+                                    <input type="password" value="" id="passwordInput" placeholder="Nueva contraseña" required>
+                                    <button type="button" class="show-pass-btn" onclick="togglePassword()">👁️</button>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="perfil-actions">
+                            <button type="submit">Guardar cambios</button>
+                            <button type="button" class="delete-account-btn" onclick="confirmDelete()">Eliminar cuenta</button>
+                        </div>
+                        <div class="perfil-feedback" id="perfilFeedback" style="display:none;">¡Cambios guardados!</div>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script>
+        function cerrarSesion() {
+            window.location.href = 'index.html';
+        }
+        // Avatar preview
+        const avatarInput = document.getElementById('avatarInput');
+        const avatarPreview = document.getElementById('avatarPreview');
+        avatarInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    avatarPreview.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        // Feedback al guardar
+        const perfilForm = document.getElementById('perfilForm');
+        const perfilFeedback = document.getElementById('perfilFeedback');
+        perfilForm.onsubmit = function(e) {
+            e.preventDefault();
+            perfilFeedback.style.display = 'block';
+            setTimeout(()=>{ perfilFeedback.style.display = 'none'; }, 2000);
+        };
+        function togglePassword() {
+            const passInput = document.getElementById('passwordInput');
+            passInput.type = passInput.type === 'password' ? 'text' : 'password';
+        }
+        function confirmDelete() {
+            if (confirm('¿Seguro que quieres eliminar tu cuenta? Esta acción no se puede deshacer.')) {
+                alert('Cuenta eliminada (demo).');
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html> 
